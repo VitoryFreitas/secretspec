@@ -76,6 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # npm Trusted Publishing (OIDC), no token needed
+      contents: read
     steps:
       - uses: actions/checkout@v5
       - name: Sync SDK package versions
@@ -83,6 +84,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+          registry-url: "https://registry.npmjs.org"
       - name: Upgrade npm (Trusted Publishing needs npm >= 11.5.1)
         run: npm install -g npm@latest
       - name: Install napi CLI
