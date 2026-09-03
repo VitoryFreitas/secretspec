@@ -6,6 +6,12 @@
   },
   "methods": [
     {
+      "name": "rpc.discover",
+      "summary": "Return this endpoint's self-contained OpenRPC description without initializing application state (0.20+).",
+      "params": [{ "name": "params", "required": true, "schema": { "$ref": "common.schema.json#/$defs/EmptyParams" } }],
+      "result": { "name": "OpenRPC document", "schema": { "$ref": "common.schema.json#/$defs/DiscoveryDocument" } }
+    },
+    {
       "name": "rpc.initialize",
       "params": [{ "name": "params", "required": true, "schema": { "$ref": "resolver.schema.json#/$defs/InitializeParams" } }],
       "result": { "name": "result", "schema": { "$ref": "resolver.schema.json#/$defs/InitializeResult" } }
