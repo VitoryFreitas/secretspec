@@ -130,7 +130,7 @@ jobs:
       # MINGW64 (msvcrt-based) matches the CRT the x86_64-pc-windows-gnu Rust
       # target links, so every object in the archive agrees on one C runtime.
       - name: Install MSYS2 MinGW toolchain (compiles the staticlib's C deps)
-        uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e # v2.33.0
+        uses: msys2/setup-msys2@3c51bf698df1e37b2261f53cb67797b97761185c # v2.34.0
         with:
           msystem: MINGW64
           path-type: inherit
